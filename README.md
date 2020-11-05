@@ -1,2 +1,4 @@
 # template
- NAgymarosi Mókuslak Template
+ Nagymarosi Mókuslak Template
+
+ Wordpress Template for Nagymarosi Mókuslak

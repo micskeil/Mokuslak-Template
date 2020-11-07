@@ -30,8 +30,17 @@ $homepage = false;
   
 <link href="https://fonts.googleapis.com/css?family=PT+Serif|Rufina:700" rel="stylesheet">
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" lazyload>
+    <!-- Custom styles 
+
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri( 'style.css' ); ?>"> 
+
+    ez csak, ha nem működne a function php stylesheet beszedése
+  
+    -->
+
+    <?php 
+    wp_head();
+    ?>
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.png" type="image/png" sizes="512x512" lazyload>
@@ -49,37 +58,7 @@ $homepage = false;
     <meta property="og:image" content="img/og-img.jpg">
     <meta property="og:title" content="Nagymarosi Mókuslak">
     <meta property="og:description" content="">
-  <?php
-
-    session_start();
-
-    $languages = explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-
-    foreach($languages as $lang)
-    {
-      if($lang == "hu-HU" && $_SESSION['lang'] != 'en') {
-        $_SESSION['lang'] = "hu";
-        break;
-      }
-    }
-
-    // Set Language variable
-    if(isset($_GET['lang']) && !empty($_GET['lang'])){
-     $_SESSION['lang'] = $_GET['lang'];
-
-     if(isset($_SESSION['lang']) && $_SESSION['lang'] != $_GET['lang']){
-      echo "<script type='text/javascript'> location.reload(); </script>";
-     }
-    }
-
-    // Include Language file
-    if(isset($_SESSION['lang'])){
-     include "lang/lang_".$_SESSION['lang'].".php";
-    }else{
-     include "lang/lang_en.php";
-    }
-
-  ?>
+  
   </head>
 
         <?php

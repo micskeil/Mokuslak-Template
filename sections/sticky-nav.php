@@ -2,7 +2,7 @@
 <div class = "container-fluid sticky-top shadow-sm"> 
     <nav class="container navbar navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="./img/logo.png" width="100" height="100" class="d-inline-block align-left" alt="">
+        <img src="./wp-content/themes/mokuslak/img/logo.png" width="100" height="100" class="d-inline-block align-left" alt="">
         <title class="navbar-brand d-none d-xl-inline-block">Nagymarosi Mókuslak</title>
       </a>
 
@@ -25,10 +25,10 @@
             <button class="btn btn-outline-success" type="button">RESERVATION/FOGLALÁS</button>
           </form>
           <a href="https://www.facebook.com/nagymarosiMokuslak" class="nav-item">
-            <img src="./img/fb-icon.svg" width="40px" height="40px" class="nav-link" alt="">
+            <img src="./wp-content/themes/mokuslak/img/fb-icon.svg" width="40px" height="40px" class="nav-link" alt="">
           </a>
           <a href="https://www.instagram.com/mokuslak/" class="nav-item">
-            <img src="./img/instagram-icon.svg" width="40px" height="40px" class="nav-link" alt="">
+            <img src="./wp-content/themes/mokuslak/img/instagram-icon.svg" width="40px" height="40px" class="nav-link" alt="">
           </a>
         </div>
         </div>

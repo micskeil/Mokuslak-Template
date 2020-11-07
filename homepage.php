@@ -6,8 +6,16 @@ $current_page = "home";
 
 ?>
 
-<div class='container text-justify'>
-  <h1>Content</h1>
-  <p>text</p>
+<div class='container-fluid text-justify'>
+  
+   <?php
+     if(have_posts()) {
+       while(have_posts()) {
+          the_content();
+       }
+     }
+    ?>
+     
+  
 </div>
       

@@ -1,9 +1,14 @@
-<!-- Image and text -->
-<div class = "container-fluid sticky-top shadow-sm"> 
+<div class = "container-fluid sticky-top shadow-sm bg-light"> 
     <nav class="container navbar navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="./wp-content/themes/mokuslak/img/logo.png" width="100" height="100" class="d-inline-block align-left" alt="">
-        <title class="navbar-brand d-none d-xl-inline-block">Nagymarosi Mókuslak</title>
+        <div class="d-inline-block align-left" alt=""> 
+          <?php the_custom_logo() ?> 
+        </div>
+        <a href="<?php 
+            get_bloginfo('url')?>" class="navbar-brand d-none d-xl-inline-block ml-3">
+          <?php 
+            printf( get_bloginfo('name') . ' ' . get_bloginfo('description')); ?>
+        </a>
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

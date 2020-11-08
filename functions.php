@@ -1,5 +1,15 @@
 <?php
 
+require get_template_directory() . '/bootstrap-navwalker.php';
+
+function add_additional_class_on_li($classes, $item, $args) {
+  if(isset($args->add_li_class)) {
+      $classes[] = $args->add_li_class;
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
 function mokuslak_theme_support(){
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -10,6 +20,9 @@ function mokuslak_theme_support(){
         'flex-width'  => false,
         'header-text' => array( 'site-title', 'site-description' ),
     ) );
+    
+    require get_template_directory() . '/bootstrap-navwalker.php';
+    
 }
 
 add_action('after_setup_theme','mokuslak_theme_support');
@@ -30,9 +43,13 @@ function mokuslak_register_scripts() {
   wp_enqueue_script('mokuslak-jquery','https://code.jquery.com/jquery-3.3.1.js', array(), null, true);
   wp_enqueue_script('mokuslak-flip','https://cdn.rawgit.com/nnattawat/flip/master/dis t/jquery.flip.min.js', array(), null, true);
   wp_enqueue_script('mokuslak-bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js',array(), null, true);
-  wp_enqueue_script('mokuslak-recaptcha','https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key',array(), null , true);
 }
 
 add_action( 'wp_enqueue_scripts', 'mokuslak_register_scripts');
+
+function register_my_menu() {
+    register_nav_menu('header-menu',__( 'Header Menu' ));
+  }
+  add_action( 'init', 'register_my_menu' );
 
 ?>

@@ -46,10 +46,10 @@
             <button class="btn btn-outline-success" type="button">RESERVATION/FOGLALÁS</button>
           </form>
           
-          <a href="https://www.facebook.com/nagymarosiMokuslak" class="nav-item">
+          <a href="https://www.facebook.com/nagymarosiMokuslak" target="_blank" class="nav-item">
             <img src="./wp-content/themes/mokuslak/img/fb-icon.svg" width="40px" height="40px" class="nav-link" alt="">
           </a>
-          <a href="https://www.facebook.com/nagymarosiMokuslak" class="nav-item">
+          <a href="https://www.instagram.com/mokuslak/" target="_blank" class="nav-item">
             <img src="./wp-content/themes/mokuslak/img/instagram-icon.svg" width="40px" height="40px" class="nav-link" alt="">
           </a>
       </div>

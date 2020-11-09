@@ -1,10 +1,10 @@
-<div class = "container-fluid sticky-top shadow-sm bg-light border border-bottom-3"> 
+<div class = "container-fluid sticky-top shadow-sm bg-light border"> 
   <div class='container justify-content-between'>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light px-0 bg-light">
     
       <!-- SITE LOGO AND SITE NAME, SITE TAG -->
       
-      <div class="navbar-brand mr-auto">
+      <div class="navbar-brand my-0">
         <a class="" alt="<?php 
             printf( get_bloginfo('name') . ' ' . get_bloginfo('description')); ?>"> 
           <?php the_custom_logo() ?> 

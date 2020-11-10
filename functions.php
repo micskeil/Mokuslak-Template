@@ -1,15 +1,5 @@
 <?php
 
-require get_template_directory() . '/bootstrap-navwalker.php';
-
-function add_additional_class_on_li($classes, $item, $args) {
-  if(isset($args->add_li_class)) {
-      $classes[] = $args->add_li_class;
-  }
-  return $classes;
-}
-add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
-
 function mokuslak_theme_support(){
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -47,9 +37,35 @@ function mokuslak_register_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'mokuslak_register_scripts');
 
+// HEADER MENU REG AND DESIGN CHANGE ADD CLASS TO LIs
+
 function register_my_menu() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
   }
   add_action( 'init', 'register_my_menu' );
+
+
+  function add_additional_class_on_li($classes, $item, $args) {
+    if(isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
+  }
+  add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+  
+
+
+ function mokuslak_widgets_init() {
+     register_sidebar( array(
+         'name'          => __( 'primary', 'mokuslak' ),
+         'id'            => 'sidebar-1',
+         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+         'after_widget'  => '</aside>',
+         'before_title'  => '<h5 class="widget-title font-weight-bold pb-3">',
+         'after_title'   => '</h5>',
+     ) );
+ }
+
+ add_action( 'widgets_init', 'mokuslak_widgets_init' );
 
 ?>

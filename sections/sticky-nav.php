@@ -1,10 +1,10 @@
-<div class = "container-fluid sticky-top shadow-sm bg-light border"> 
-  <div class='container justify-content-between'>
-    <nav class="navbar navbar-expand-md navbar-light px-0 bg-light">
+<div class = "container-fluid sticky-top shadow-sm bg-light border px-0"> 
+  <div class='container p-0'>
+    <nav class="navbar  navbar-expand-md navbar-light px-0 bg-light">
     
       <!-- SITE LOGO AND SITE NAME, SITE TAG -->
       
-      <div class="navbar-brand my-0">
+      <div class="navbar-brand pl-3 my-0">
         <a class="" alt="<?php 
             printf( get_bloginfo('name') . ' ' . get_bloginfo('description')); ?>"> 
           <?php the_custom_logo() ?> 
@@ -18,16 +18,16 @@
 
       <!-- TOGGLE BUTTON -->
       
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler pr-3" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- SITE NAV MENU AND RESERVATION BUTTON, SOCIAL -->
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbarNavDropdown">
 
 
-      <div class="navbar-nav align-items-center justify-content-end">
+      <div class="navbar-nav align-items-center justify-content-start">
               <?php wp_nav_menu(array(
                       'theme_location' => 'header-menu',
                       'depth'           =>  2, // 1 = no dropdowns, 2 = with dropdowns.

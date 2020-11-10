@@ -1,6 +1,11 @@
 /* Color Theme Swatches in HSLA */
 /* ROBOTO: Light, Regular, Bold, Black */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin-ext");
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* GENERAL */
 body {
   font-family: 'PT Serif', Serif;
